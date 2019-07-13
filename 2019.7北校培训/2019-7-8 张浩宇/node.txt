@@ -1,0 +1,9 @@
+const int NXT = 1, DST = 0, FLOW = 2, CST = 3;
+int edge[MXN][4];
+
+edge[nd][DST]
+
+Q1： /*a1*/ < /*a2*/ < /*a3*/
+Q2: x * a1 + 2 < x * (a2 + 1) + 1 < x * (a3 + 2)
+Q3: (1 - x) * a1 + 2 < (1 - x) * (a2 + 1) + 1 < (1 - x) * (a3 + 2)
+
