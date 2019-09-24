@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>USACO 2019 FEB | wwwwodddd&#039;website</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://wwwwodddd.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://wwwwodddd.com/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<meta name='robots' content='noindex,follow' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="wwwwodddd&#039;website &raquo; Feed" href="http://wwwwodddd.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="wwwwodddd&#039;website &raquo; Comments Feed" href="http://wwwwodddd.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="wwwwodddd&#039;website &raquo; USACO 2019 FEB Comments Feed" href="http://wwwwodddd.com/usaco-2019-feb/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/wwwwodddd.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://wwwwodddd.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://wwwwodddd.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='Katex-css'  href='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/KaTeX/katex.min.css?ver=10.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='prism-theme-default-css'  href='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/themes/prism.css?ver=1.15.0' type='text/css' media='all' />
+<link rel='stylesheet' id='prism-plugin-toolbar-css'  href='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/toolbar/prism-toolbar.css?ver=1.15.0' type='text/css' media='all' />
+<link rel='stylesheet' id='prism-plugin-line-numbers-css'  href='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/line-numbers/prism-line-numbers.css?ver=1.15.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-file-upload-style-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/css/wordpress_file_upload_style.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-file-upload-style-safe-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/css/wordpress_file_upload_style_safe.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-file-upload-adminbar-style-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/css/wordpress_file_upload_adminbarstyle.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/vendor/jquery/jquery-ui.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-timepicker-addon-css-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/vendor/jquery/jquery-ui-timepicker-addon.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='http://wwwwodddd.com/wp-content/themes/twentytwelve/style.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='http://wwwwodddd.com/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://wwwwodddd.com/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<script type='text/javascript' src='http://wwwwodddd.com/wp-includes/js/json2.min.js?ver=2015-05-03'></script>
+<![endif]-->
+<script type='text/javascript' src='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/js/wordpress_file_upload_functions.js?ver=5.1.1'></script>
+<link rel='https://api.w.org/' href='http://wwwwodddd.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://wwwwodddd.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://wwwwodddd.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='CF1110 / Codeforces Global Round 1' href='http://wwwwodddd.com/cf1110/' />
+<link rel='next' title='2019年十二省NOI省选联考模测（第二场）' href='http://wwwwodddd.com/2019-51nod-2/' />
+<meta name="generator" content="WordPress 5.1.1" />
+<link rel="canonical" href="http://wwwwodddd.com/usaco-2019-feb/" />
+<link rel='shortlink' href='http://wwwwodddd.com/?p=158' />
+<link rel="alternate" type="application/json+oembed" href="http://wwwwodddd.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwwwwodddd.com%2Fusaco-2019-feb%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://wwwwodddd.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwwwwodddd.com%2Fusaco-2019-feb%2F&#038;format=xml" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="post-template-default single single-post postid-158 single-format-standard wp-embed-responsive custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="http://wwwwodddd.com/" title="wwwwodddd&#039;website" rel="home">wwwwodddd&#039;website</a></h1>
+			<h2 class="site-description">慕君之心，至死方休。</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-menu-1-container"><ul id="menu-menu-1" class="nav-menu"><li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-141"><a href="http://wwwwodddd.com/">Home</a></li>
+<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="http://wwwwodddd.com/about/">About</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-158" class="post-158 post type-post status-publish format-standard hentry category-uncategorized tag-usaco">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">USACO 2019 FEB</h1>
+										<div class="comments-link">
+					<a href="http://wwwwodddd.com/usaco-2019-feb/#respond"><span class="leave-reply">Leave a reply</span></a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><span id="more-158"></span></p>
+<h1>Bronze</h1>
+<h2>B1</h2>
+<pre><code class="language-python line-numbers">import sys
+sys.stdin = open('herding.in', 'r')
+sys.stdout = open('herding.out', 'w')
+x, y, z = sorted(map(int, raw_input().split()))
+z -= y + 1
+y -= x + 1
+if y == 0 and z == 0:
+    print 0
+elif y == 1 or z == 1:
+    print 1
+else:
+    print 2
+print max(y, z)
+</code></pre>
+<h2>B2</h2>
+<pre><code class="language-python line-numbers">import sys
+sys.stdin = open('revegetate.in', 'r')
+sys.stdout = open('revegetate.out', 'w')
+n, m = map(int, raw_input().split())
+a = [[] for i in range(n + 1)]
+for i in range(m):
+    x, y = map(int, raw_input().split())
+    a[x].append(y)
+    a[y].append(x)
+c = [0 for i in range(n + 1)]
+s = ''
+for i in range(1, n + 1):
+    t = set(range(1, 5))
+    for j in a[i]:
+        if j &lt; i and c[j] in t:
+            t.remove(c[j])
+    c[i] = list(t)[0]
+    s += str(c[i])
+print s
+</code></pre>
+<h2>B3</h2>
+<pre><code class="language-python line-numbers">import sys
+sys.stdin = open('traffic.in', 'r')
+sys.stdout = open('traffic.out', 'w')
+n = input()
+a = []
+for i in range(n):
+    x, y, z = raw_input().split()
+    y = int(y)
+    z = int(z)
+    a.append((x, y, z))
+
+l, h = 0, 1000000
+for x, y, z in a[::-1]:
+    if x == 'none':
+        l = max(l, y)
+        h = min(h, z)
+    elif x == 'on':
+        l -= z
+        h -= y
+    elif x == 'off':
+        l += y
+        h += z
+l = max(l, 0)
+print l, h
+l, h = 0, 1000000
+for x, y, z in a:
+    if x == 'none':
+        l = max(l, y)
+        h = min(h, z)
+    elif x == 'on':
+        l += y
+        h += z
+    elif x == 'off':
+        l -= z
+        h -= y
+l = max(l, 0)
+print l, h
+</code></pre>
+<h1>Silver</h1>
+<h2>S1</h2>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, a[100020];
+int work() {
+    if (a[n - 1] == a[0] + n - 1) {
+        return 0;
+    }
+    if (a[n - 2] == a[0] + n - 2 || a[n - 1] == a[1] + n - 2) {
+        if (a[n - 1] == a[0] + n) {
+            return 1;
+        } else {
+            return 2;
+        }
+    }
+    int z1 = n;
+    for (int i = 0; i &lt; n; i++) {
+        int p = a[i] + n - 1;
+        int t = upper_bound(a, a + n, p) - a;
+        z1 = min(z1, n - (t - i));
+    }
+    for (int i = 0; i &lt; n; i++) {
+        int p = a[i] - n + 1;
+        int t = lower_bound(a, a + n, p) - a - 1;
+        z1 = min(z1, n - (i - t));
+    }
+    return z1;
+}
+int main() {
+    freopen("herding.in", "r", stdin);
+    freopen("herding.out", "w", stdout);
+    cin &gt;&gt; n;
+    for (int i = 0; i &lt; n; i++) {
+        cin &gt;&gt; a[i];
+    }
+    sort(a, a + n);
+    int z2 = max(a[n - 1] - a[1], a[n - 2] - a[0]) - n + 2;
+    cout &lt;&lt; work() &lt;&lt; endl;
+    cout &lt;&lt; z2 &lt;&lt; endl;
+}
+</code></pre>
+<h2>S2</h2>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, k;
+int a[1020][1020];
+int main() {
+    freopen("paintbarn.in", "r", stdin);
+    freopen("paintbarn.out", "w", stdout);
+    cin &gt;&gt; n &gt;&gt; k;
+    for (int i = 0; i &lt; n; i++) {
+        int x1, y1, x2, y2;
+        cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2;
+        x1++;
+        y1++;
+        x2++;
+        y2++;
+        a[x1][y1]++;
+        a[x1][y2]--;
+        a[x2][y1]--;
+        a[x2][y2]++;
+    }
+    for (int i = 1; i &lt;= 1010; i++) {
+        for (int j = 1; j &lt;= 1010; j++) {
+            a[i][j] += a[i][j - 1];
+        }
+    }
+    for (int i = 1; i &lt;= 1010; i++) {
+        for (int j = 1; j &lt;= 1010; j++) {
+            a[i][j] += a[i - 1][j];
+        }
+    }
+    int cnt = 0;
+    for (int i = 1; i &lt;= 1010; i++) {
+        for (int j = 1; j &lt;= 1010; j++) {
+            if (a[i][j] == k) {
+                cnt++;
+            }
+        }
+    }
+    cout &lt;&lt; cnt &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2>S3</h2>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, m;
+int f[200020];
+int F(int x) {
+    return f[x] != x ? f[x] = F(f[x]) : x;
+}
+void U(int x, int y) {
+    f[F(x)] = F(y);
+}
+int main() {
+    freopen("revegetate.in", "r", stdin);
+    freopen("revegetate.out", "w", stdout);
+    cin &gt;&gt; n &gt;&gt; m;
+    for (int i = 0; i &lt;= 2 * n; i++) {
+        f[i] = i;
+    }
+    for (int i = 0; i &lt; m; i++) {
+        int x, y;
+        char o;
+        cin &gt;&gt; o &gt;&gt; x &gt;&gt; y;
+        if (o == 'S') {
+            U(x, y);
+            U(x + n, y + n);
+        } else {
+            U(x + n, y);
+            U(x, y + n);
+        }
+    }
+    for (int i = 1; i &lt;= n; i++) {
+        if (F(i) == F(i + n)) {
+            printf("0\n");
+            return 0;
+        }
+    }
+    int cnt = 0;
+    for (int i = 1; i &lt;= 2 * n; i++) {
+        if (F(i) == i) {
+            cnt++;
+        }
+    }
+    cnt /= 2;
+    printf("1");
+    for (int i = 0; i &lt; cnt; i++) {
+        printf("0");
+    }
+    printf("\n");
+    return 0;
+}
+</code></pre>
+<h1>Gold</h1>
+<h2>G1</h2>
+<p>DFS序 + 树状数组</p>
+<p>x到y路径上所有点的异或，就是<br />
+x到根节点所有点的异或 ^ y到根节点所有点的异或 ^ LCA(x, y)的点权。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, q;
+vector&lt;int&gt; a[100020];
+int f[100020][20];
+int d[100020];
+int c[200020];
+int w[100020];
+int L[100020];
+int R[100020];
+int ss;
+void change(int x, int y) {
+    for (int i = x; i &lt;= 2 * n; i += i &amp; -i) {
+        c[i] ^= y;
+    }
+}
+int query(int x) {
+    int re = 0;
+    for (int i = x; i &gt; 0; i -= i &amp; -i) {
+        re ^= c[i];
+    }
+    return re;
+}
+void dfs(int x, int y) {
+    f[x][0] = y;
+    d[x] = d[y] + 1;
+    for (int i = 1; i &lt; 20; i++) {
+        f[x][i] = f[f[x][i - 1]][i - 1];
+    }
+    ss++;
+    L[x] = ss;
+    for (int i: a[x]) {
+        if (i != y) {
+            dfs(i, x);
+        }
+    }
+    ss++;
+    R[x] = ss;
+}
+int lca(int x, int y) {
+    if (d[x] &lt; d[y]) {
+        swap(x, y);
+    }
+    int dd = d[x] - d[y];
+    for (int i = 0; i &lt; 20; i++) {
+        if (dd &gt;&gt; i &amp; 1) {
+            x = f[x][i];
+        }
+    }
+    if (x == y) {
+        return x;
+    }
+    for (int i = 20 - 1; i &gt;= 0; i--) {
+        if (f[x][i] != f[y][i]) {
+            x = f[x][i];
+            y = f[y][i];
+        }
+    }
+    return f[x][0];
+}
+int main() {
+    freopen("cowland.in", "r", stdin);
+    freopen("cowland.out", "w", stdout);
+    cin &gt;&gt; n &gt;&gt; q;
+    for (int i = 1; i &lt;= n; i++) {
+        cin &gt;&gt; w[i];
+    }
+    for (int i = 1; i &lt; n; i++) {
+        int x, y;
+        cin &gt;&gt; x &gt;&gt; y;
+        a[x].push_back(y);
+        a[y].push_back(x);
+    }
+    dfs(1, 0);
+    for (int i = 1; i &lt;= n; i++) {
+        change(L[i], w[i]);
+        change(R[i], w[i]);
+    }
+    for (int i = 0; i &lt; q; i++) {
+        int o, x, y;
+        cin &gt;&gt; o &gt;&gt; x &gt;&gt; y;
+        if (o == 1) {
+            change(L[x], w[x] ^ y);
+            change(R[x], w[x] ^ y);
+            w[x] = y;
+        } else {
+            cout &lt;&lt; (query(L[x]) ^ query(L[y]) ^ w[lca(x, y)]) &lt;&lt; endl;
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h2>G2</h2>
+<p>二分，贪心。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, a[100020];
+vector&lt;int&gt; b[100020];
+bool ok(int M) {
+    int cnt = 0;
+    int st = 0;
+    for (int i = 0; i &lt; M; i++) {
+        b[i].clear();
+    }
+    int last = 0;
+    for (int i = 1; i &lt;= M; i++) {
+        if (a[i] &lt; last) {
+            return false;
+        }
+        if (st == cnt) {
+            b[cnt].push_back(a[i]);
+            cnt++;
+        } else if (a[i] &gt; b[cnt - 1][0]) {
+            b[cnt].push_back(a[i]);
+            cnt++;
+        } else {
+            int left = st - 1;
+            int right = cnt;
+            while (left &lt; right - 1) {
+                int mid = (left + right) / 2;
+                if (a[i] &lt; b[mid][0]) {
+                    right = mid;
+                } else {
+                    left = mid;
+                }
+            }
+            if (a[i] &lt; b[right].back()) {
+                b[right].push_back(a[i]);
+            } else {
+                st = right;
+                while (a[i] &gt; b[right].back()) {
+                    last = b[right].back();
+                    b[right].pop_back();
+                }
+                b[right].push_back(a[i]);
+            }
+        }
+//      for (int j = st; j &lt;= cnt; j++) {
+//          for (int k: b[j]) {
+//              cout &lt;&lt; k &lt;&lt; ' ';
+//          }
+//          cout &lt;&lt; endl;
+//      }
+    }
+    return true;
+}
+int main() {
+    freopen("dishes.in", "r", stdin);
+    freopen("dishes.out", "w", stdout);
+    cin &gt;&gt; n;
+    for (int i = 1; i &lt;= n; i++) {
+        cin &gt;&gt; a[i];
+    }
+    int L = 0;
+    int R = n + 1;
+    while (L &lt; R - 1) {
+        int M = (L + R) / 2;
+        if (ok(M)) {
+            L = M;
+        } else {
+            R = M;
+        }
+    }
+    cout &lt;&lt; L &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2>G3</h2>
+<p>注意选择的2个矩形不能有任何重叠的部分。<br />
+这样预处理出来前后几行的结果，前后几列的结果。枚举分割线即可。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int L = 200;
+int n, k;
+int a[220][220];
+int b[220][220];
+int c[220][220];
+int cL[220];
+int cR[220];
+int rT[220];
+int rB[220];
+void gao(int a[220][220]) {
+    for (int i = 1; i &lt;= L; i++) {
+        for (int j = 1; j &lt;= L; j++) {
+            a[i][j] += a[i][j - 1];
+        }
+    }
+    for (int i = 1; i &lt;= L; i++) {
+        for (int j = 1; j &lt;= L; j++) {
+            a[i][j] += a[i - 1][j];
+        }
+    }
+}
+int main() {
+    freopen("paintbarn.in", "r", stdin);
+    freopen("paintbarn.out", "w", stdout);
+    cin &gt;&gt; n &gt;&gt; k;
+    for (int i = 0; i &lt; n; i++) {
+        int x1, y1, x2, y2;
+        cin &gt;&gt; x1 &gt;&gt; y1 &gt;&gt; x2 &gt;&gt; y2;
+        x1++;
+        y1++;
+        x2++;
+        y2++;
+        a[x1][y1]++;
+        a[x1][y2]--;
+        a[x2][y1]--;
+        a[x2][y2]++;
+    }
+    gao(a);
+    int cnt = 0;
+    for (int i = 1; i &lt;= L; i++) {
+        for (int j = 1; j &lt;= L; j++) {
+            if (a[i][j] == k) {
+                b[i][j] = 1;
+            }
+            if (a[i][j] == k - 1) {
+                c[i][j] = 1;
+            }
+        }
+    }
+    gao(b);
+    gao(c);
+    int ans = 0;
+    for (int i1 = 0; i1 &lt; L; i1++) {
+        for (int i2 = i1 + 1; i2 &lt;= L; i2++) {
+            int tmp = 0;
+            for (int j = 1; j &lt;= L; j++) {
+                int dd = 0;
+                dd -= (b[i2][j] - b[i1][j]) - (b[i2][j - 1] - b[i1][j - 1]);
+                dd += (c[i2][j] - c[i1][j]) - (c[i2][j - 1] - c[i1][j - 1]);
+                tmp += dd;
+                tmp = max(tmp, 0);
+                cL[j] = max(cL[j], tmp);
+            }
+        }
+    }
+    for (int i1 = 0; i1 &lt; L; i1++) {
+        for (int i2 = i1 + 1; i2 &lt;= L; i2++) {
+            int tmp = 0;
+            for (int j = L; j &gt;= 1; j--) {
+                int dd = 0;
+                dd -= (b[i2][j] - b[i1][j]) - (b[i2][j - 1] - b[i1][j - 1]);
+                dd += (c[i2][j] - c[i1][j]) - (c[i2][j - 1] - c[i1][j - 1]);
+                tmp += dd;
+                tmp = max(tmp, 0);
+                cR[j] = max(cR[j], tmp);
+            }
+        }
+    }
+    for (int j1 = 0; j1 &lt; L; j1++) {
+        for (int j2 = j1 + 1; j2 &lt;= L; j2++) {
+            int tmp = 0;
+            for (int i = 1; i &lt;= L; i++) {
+                int dd = 0;
+                dd -= (b[i][j2] - b[i][j1]) - (b[i - 1][j2] - b[i - 1][j1]);
+                dd += (c[i][j2] - c[i][j1]) - (c[i - 1][j2] - c[i - 1][j1]);
+                tmp += dd;
+                tmp = max(tmp, 0);
+                rT[i] = max(rT[i], tmp);
+            }
+        }
+    }
+    for (int j1 = 0; j1 &lt; L; j1++) {
+        for (int j2 = j1 + 1; j2 &lt;= L; j2++) {
+            int tmp = 0;
+            for (int i = L; i &gt;= 1; i--) {
+                int dd = 0;
+                dd -= (b[i][j2] - b[i][j1]) - (b[i - 1][j2] - b[i - 1][j1]);
+                dd += (c[i][j2] - c[i][j1]) - (c[i - 1][j2] - c[i - 1][j1]);
+                tmp += dd;
+                tmp = max(tmp, 0);
+                rB[i] = max(rB[i], tmp);
+            }
+        }
+    }
+    int maxcL = 0;
+    int maxrT = 0;
+    for (int i = 1; i &lt;= L + 1; i++) {
+        maxcL = max(maxcL, cL[i-1]);
+        maxrT = max(maxrT, rT[i-1]);
+        ans = max(ans, maxcL + cR[i]);
+        ans = max(ans, maxrT + rB[i]);
+    }
+    ans += b[L][L];
+    cout &lt;&lt; ans &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h1>Platinum</h1>
+<h2>P1</h2>
+<p>注意到如果起点相同，那么随着终点向右移动，最优解是单峰的。</p>
+<p>并且随着左端点从左向右移动，右端点的最优解是单调的。</p>
+<p>所以就是双指针法。</p>
+<p>注意到一个区间的答案是<br />
+(1-p1)(1-p2)..(1-pn) * (p1/(1-p1) + p2/(1-p2) + &#8230; + pn/(1-pn))</p>
+<p>分别维护前后2部分，这样就可以支持在末尾追加一个概率，和删掉第一个概率。</p>
+<p>疑似需要处理精度爆炸的问题（疑似需要取对数）</p>
+<p>如果左端点是i，右端点的最优位置是best[i] （如果有多个最优位置，认为是最左的）<br />
+那么best[i]数组是单调增加的。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n;
+long double p[1000020];
+int main() {
+    freopen("cowdate.in", "r", stdin);
+    freopen("cowdate.out", "w", stdout);
+    long double ans = 0;
+    cin &gt;&gt; n;
+    for (int i = 1; i &lt;= n; i++) {
+        cin &gt;&gt; p[i];
+        p[i] /= 1e6;
+        ans = max(ans, (long double)p[i]);
+    }
+    if (n &lt;= 4000) {
+        ans = 0;
+        for (int i = 1; i &lt;= n; i++) {
+            long double f = 0;
+            long double g = 0;
+            for (int j = i; j &lt;= n; j++) {
+                f += log(1 - p[j]);
+                g += p[j] / (1 - p[j]);
+                ans = max(ans, exp(f) * g);
+            }
+        }
+        printf("%d\n", (int)(1000000 * ans + 1e-6));
+        return 0;
+    }
+    long double f = 0;
+    long double g = 0;
+    int j = 1;
+    for (int i = 1; i &lt;= n; i++) {
+        while (j &lt;= n &amp;&amp; exp(f) * g &lt; exp(f + log(1 - p[j])) * (g + p[j] / (1 - p[j]))) {
+            f += log(1 - p[j]);
+            g += p[j] / (1 - p[j]);
+            ans = max(ans, exp(f) * g);
+            j++;
+        }
+        f -= log(1 - p[i]);
+        g -= p[i] / (1 - p[i]);
+    }
+    printf("%d\n", (int)(1000000 * ans + 0.13));
+}
+</code></pre>
+<h2>P2</h2>
+<p>首先不考虑y算一个全部的答案。</p>
+<p>然后减去考虑y不合法的。</p>
+<p>这是一个背包，对于每棵树需要预处理出来所有路径的长度。</p>
+<p>(每个树选一个路径，加上(n-m) * x) &lt; y 问方案数</p>
+<p>然后最后还要乘上一个环排列（不同子树的顺序不定）</p>
+<p>再除以2（顺时针和逆时针算作相同）</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+const int mod = 1000000007;
+vector&lt;pair&lt;int, int&gt; &gt; a[2520];
+long long ans = 0;
+long long cnt = 1;
+long long sum;
+int sz;
+bool v[2520];
+long long inv[2520];
+long long f[2520];
+long long g[2520];
+int n, m, x, y;
+int dfs(int x, int y) {
+    v[x] = true;
+    int re = 1;
+    for (pair&lt;int, int&gt; i: a[x]) {
+        if (i.first != y) {
+            int tmp = dfs(i.first, x);
+            re += tmp;
+            sum += (long long)i.second * tmp * (sz - tmp);
+        }
+    }
+    return re;
+}
+map&lt;int, int&gt; c;
+map&lt;int, int&gt; gao(int x, int y) {
+    v[x] = true;
+    map&lt;int, int&gt; re;
+    re[0] = 1;
+    for (pair&lt;int, int&gt; i: a[x]) {
+        if (i.first != y) {
+            map&lt;int, int&gt; tmp = gao(i.first, x);
+            for (pair&lt;int, int&gt; j: re) {
+                for (pair&lt;int, int&gt; k: tmp) {
+                    c[j.first + i.second + k.first] += j.second * k.second * 2;
+                }
+            }
+            for (pair&lt;int, int&gt; k: tmp) {
+                re[i.second + k.first] += k.second;
+            }
+        }
+    }
+    return re;
+}
+int main() {
+    freopen("mooriokart.in", "r", stdin);
+    freopen("mooriokart.out", "w", stdout);
+    cin &gt;&gt; n &gt;&gt; m &gt;&gt; x &gt;&gt; y;
+    inv[1] = 1;
+    for (int i = 2; i &lt;= n; i++) {
+        inv[i] = inv[mod % i] * (mod - mod / i) % mod;
+    }
+    if ((n - m) * x &lt;= y) {
+        f[(n - m) * x] = 1;
+    }
+
+    for (int i = 0; i &lt; m; i++) {
+        int x, y, z;
+        cin &gt;&gt; x &gt;&gt; y &gt;&gt; z;
+        a[x].push_back(make_pair(y, z));
+        a[y].push_back(make_pair(x, z));
+    }
+
+    memset(v, 0, sizeof v);
+    for (int i = 1; i &lt;= n; i++) {
+        if (!v[i]) {
+            sz = dfs(i, 0);
+            cnt = cnt * sz % mod * (sz - 1) % mod;
+        }
+    }
+
+    memset(v, 0, sizeof v);
+    for (int i = 1; i &lt;= n; i++) {
+        if (!v[i]) {
+            sz = dfs(i, 0);
+            sum = 0;
+            dfs(i, 0);
+            ans = (ans + cnt * inv[sz] % mod * inv[sz-1] % mod * sum % mod) % mod;
+        }
+    }
+
+    ans *= 2;
+
+    ans = (ans + cnt * (n - m) * x) % mod;
+
+    memset(v, 0, sizeof v);
+    for (int i = 1; i &lt;= n; i++) {
+        if (!v[i]) {
+            c.clear();
+            gao(i, 0);
+            memset(g, 0, sizeof g);
+//          for (pair&lt;int, int&gt; i: c) {
+//              cout &lt;&lt; i.first &lt;&lt; ' ' &lt;&lt; i.second &lt;&lt; endl;
+//          }
+//          cout &lt;&lt; endl;
+            for (pair&lt;int, int&gt; i: c) {
+                for (int j = i.first; j &lt;= y; j++) {
+                    g[j] = (g[j] + f[j - i.first] * i.second) % mod;
+                }
+            }
+            swap(f, g);
+        }
+    }
+//  for (int i = 0; i &lt;= y; i++) {
+//      cout &lt;&lt; i &lt;&lt; ' ' &lt;&lt; f[i] &lt;&lt; endl;
+//  }
+    for (int i = 0; i &lt; y; i++) {
+        ans = (ans - (long long)i * f[i] % mod + mod) % mod;
+    }
+
+    for (int i = 1; i &lt; n - m; i++) {
+        ans = ans * i % mod;
+    }
+
+    if (ans &amp; 1) {
+        ans += mod;
+    }
+    ans /= 2;
+    cout &lt;&lt; ans &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+<h2>P3</h2>
+<p>输入(0, 0)到(T, T)矩形内的n个点。</p>
+<p>从(0, 0)到(T, T)只能向正方向走，希望经过最多的点（最长上升子序列）</p>
+<p>如果从(x1, y1)走到(x2, y2)那么代价是(x2-x1) * (y2-y1)</p>
+<p>问所有经过最多点的路径，权值最小的是多大？</p>
+<p>T &lt;= 1e6<br />
+n &lt;= 2e5<br />
+n个点中，任意2个点，不会在同一行或同一列。</p>
+<p>首先说说题目中的哪些条件有用，哪些没用吧。<br />
+T的范围基本没用。<br />
+任意2个点，不会在同一行或同一列，可以去掉，但是实现起来会麻烦很多。<br />
+最关键的是经过最多点的路径。</p>
+<p>直接暴力是n^2的</p>
+<p>然后假设求出了最长不下降子序列<br />
+每个点在最长不下降子序列中的位置是确定的。<br />
+动态规划中只需要考虑相邻两个位置之间的关系即可。</p>
+<p>这个事情用暴力来做还是n^2的<br />
+怎么做更快呢？线段树分治</p>
+<p>对于相邻两个位置i-1和i<br />
+假设i-1位置上的任意一个点，可以到i位置上的任意一个点，那么有一个非常简单的反向单调性。<br />
+（越靠右下的点，越会选到左上的点）</p>
+<p>但是实际上，对于第i位置的点，不是i-1位置上的任意一个点都可以（可行的是一个区间）<br />
+这个区间是不包含的（这个条件没用）<br />
+对于第i-1层的点建一个线段树。</p>
+<p>可以用这个线段树上的一些节点，拼出 可以转移到某点的区间。<br />
+这样对于线段树上每个节点，可以转移到一些点。<br />
+这个问题就转化为了<br />
+「假设i-1位置上的任意一个点，可以到i位置上的任意一个点，那么有一个非常简单的反向单调性。」</p>
+<p>总时间复杂度大概是<span class="katex math inline">O(n \log^2 n)</span>。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n;
+pair&lt;int, int&gt; points[1000020];
+int lastmin[1000020];
+long long t;
+vector&lt;pair&lt;int, int&gt; &gt; group[200020];
+vector&lt;long long&gt; dp[200020];
+vector&lt;int&gt; querys[800020];
+
+void build(int x, int l, int r) {
+    querys[x].clear();
+    if (l == r) {
+        return;
+    }
+    int mid = (l + r) / 2;
+    build(x * 2, l, mid);
+    build(x * 2 + 1, mid + 1, r);
+}
+
+void change(int x, int l, int r, int L, int R, int v) {
+    if (L &lt;= l &amp;&amp; r &lt;= R) {
+        querys[x].push_back(v);
+        return;
+    }
+    if (R &lt; l || r &lt; L) {
+        return;
+    }
+    int mid = (l + r) / 2;
+    change(x * 2, l, mid, L, R, v);
+    change(x * 2 + 1, mid + 1, r, L, R, v);
+}
+
+void solve(const vector&lt;int&gt; &amp;querys, int l, int r, int L, int R, int index) {
+    if (l &gt; r) {
+        return;
+    }
+    int mid = (l + r) / 2;
+    int j = querys[mid];
+    long long best = 1e18;
+    int pos = -1;
+    for (int k = L; k &lt;= R; k++) {
+        int dx = (group[index][j].first - group[index - 1][k].first);
+        int dy = (group[index][j].second - group[index - 1][k].second);
+        if (dx &gt; 0 &amp;&amp; dy &gt; 0) {
+            long long tmp = dp[index - 1][k] + (long long)dx * dy;
+            if (best &gt; tmp) {
+                best = tmp;
+                pos = k;
+            }
+        }
+    }
+    assert(pos != -1);
+    dp[index][j] = min(dp[index][j], best);
+    solve(querys, l, mid - 1, pos, R, index);
+    solve(querys, mid + 1, r, L, pos, index);
+}
+
+void query(int x, int l, int r, int index) {
+    /*
+    if (index == 2) {
+        cerr &lt;&lt; "tree " &lt;&lt; x &lt;&lt; ' ' &lt;&lt; l &lt;&lt; ' ' &lt;&lt; r &lt;&lt;  ": ";
+        for (int i: querys[x]) {
+            cerr &lt;&lt; i &lt;&lt; ' ';
+        }
+        cerr &lt;&lt; endl;
+    }
+    */
+    solve(querys[x], 0, querys[x].size() - 1, l, r, index);
+    if (l == r) {
+        return;
+    }
+    int mid = (l + r) / 2;
+    query(x * 2, l, mid, index);
+    query(x * 2 + 1, mid + 1, r, index);
+}
+
+int main() {
+    freopen("mowing.in", "r", stdin);
+    freopen("mowing.out", "w", stdout);
+    cin &gt;&gt; n &gt;&gt; t;
+    for (int i = 1; i &lt;= n; i++) {
+        cin &gt;&gt; points[i].first &gt;&gt; points[i].second;
+    }
+    points[n + 1] = make_pair(t, t);
+    sort(points, points + n + 2);
+    for (int i = 0; i &lt; n + 2; i++) {
+        lastmin[i] = 1e9;
+    }
+    int length = 0;
+    for (int i = 0; i &lt; n + 2; i++) {
+        int L = -1;
+        int R = n + 2;
+        while (L &lt; R - 1) {
+            int M = (L + R) / 2;
+            if (lastmin[M] &lt; points[i].second) {
+                L = M;
+            } else {
+                R = M;
+            }
+        }
+        lastmin[R] = points[i].second;
+        group[R].push_back(points[i]);
+        length = max(length, R);
+    }
+    dp[0].resize(1);
+    dp[0][0] = 0;
+    for (int i = 1; i &lt;= length; i++) {
+        dp[i].resize(group[i].size());
+        build(1, 0, dp[i-1].size() - 1);
+        for (int j = 0; j &lt; group[i].size(); j++) {
+            dp[i][j] = 1e18;
+            int st = -1, ed = -1;
+            {
+                int L = -1, R = group[i-1].size();
+                while (L &lt; R - 1) {
+                    int M = (L + R) / 2;
+                    if (group[i-1][M].second &gt; group[i][j].second) {
+                        L = M;
+                    } else {
+                        R = M;
+                    }
+                }
+                st = R;
+            }
+            {
+                int L = -1, R = group[i-1].size();
+                while (L &lt; R - 1) {
+                    int M = (L + R) / 2;
+                    if (group[i-1][M].first &gt; group[i][j].first) {
+                        R = M;
+                    } else {
+                        L = M;
+                    }
+                }
+                ed = L;
+            }
+            change(1, 0, group[i-1].size() - 1, st, ed, j);
+        }
+        query(1, 0, group[i-1].size() - 1, i);
+        /*
+        cerr &lt;&lt; i &lt;&lt; ": ";
+        for (int j = 0; j &lt; group[i].size(); j++) {
+            cerr &lt;&lt; dp[i][j] &lt;&lt; ' ';
+        }
+        cerr &lt;&lt; endl;
+//      */
+    }
+    cout &lt;&lt; dp[length][0] &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="http://wwwwodddd.com/category/uncategorized/" rel="category tag">Uncategorized</a> and tagged <a href="http://wwwwodddd.com/tag/usaco/" rel="tag">USACO</a> on <a href="http://wwwwodddd.com/usaco-2019-feb/" title="00:00" rel="bookmark"><time class="entry-date" datetime="2019-02-27T00:00:45+08:00">2019-02-27</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://wwwwodddd.com/author/wwwwodddd/" title="View all posts by wwwwodddd" rel="author">wwwwodddd</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="http://wwwwodddd.com/cf1110/" rel="prev"><span class="meta-nav">&larr;</span> CF1110 / Codeforces Global Round 1</a></span>
+					<span class="nav-next"><a href="http://wwwwodddd.com/2019-51nod-2/" rel="next">2019年十二省NOI省选联考模测（第二场） <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/usaco-2019-feb/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://wwwwodddd.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='158' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments .comments-area -->
+
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://wwwwodddd.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://wwwwodddd.com/gcj-2019-r1b/">GCJ 2019 R1B</a>
+									</li>
+											<li>
+					<a href="http://wwwwodddd.com/usaco-2019-open/">USACO 2019 OPEN</a>
+									</li>
+											<li>
+					<a href="http://wwwwodddd.com/bestcoder-round-72/">BestCoder Round #72</a>
+									</li>
+											<li>
+					<a href="http://wwwwodddd.com/luogu-p2831/">Luogu P2831 愤怒的小鸟</a>
+									</li>
+											<li>
+					<a href="http://wwwwodddd.com/2019-51nod-2/">2019年十二省NOI省选联考模测（第二场）</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='http://bubbleioa.top/' rel='external nofollow' class='url'>冒泡ioa</a></span> on <a href="http://wwwwodddd.com/usaco-2019-jan/#comment-47">USACO 2019 JAN</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://www.k-xzy.xyz' rel='external nofollow' class='url'>Remmina</a></span> on <a href="http://wwwwodddd.com/usaco-2018-dec/#comment-44">USACO 2018 DEC</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://fff' rel='external nofollow' class='url'>hao911</a></span> on <a href="http://wwwwodddd.com/%e8%bf%99%e9%87%8c%e7%a9%ba%e7%a9%ba%e5%a6%82%e4%b9%9f/#comment-43">这里空空如也</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://wordpress.org/' rel='external nofollow' class='url'>A WordPress Commenter</a></span> on <a href="http://wwwwodddd.com/einheit/#comment-1">网站重构</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.myshareedu.com:3000/' rel='external nofollow' class='url'>LPteamJP</a></span> on <a href="http://wwwwodddd.com/%e8%bf%99%e9%87%8c%e7%a9%ba%e7%a9%ba%e5%a6%82%e4%b9%9f/#comment-11">这里空空如也</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+				<li><a href='http://wwwwodddd.com/2019/04/'>April 2019</a></li>
+	<li><a href='http://wwwwodddd.com/2019/03/'>March 2019</a></li>
+	<li><a href='http://wwwwodddd.com/2019/02/'>February 2019</a></li>
+	<li><a href='http://wwwwodddd.com/2019/01/'>January 2019</a></li>
+	<li><a href='http://wwwwodddd.com/2018/12/'>December 2018</a></li>
+	<li><a href='http://wwwwodddd.com/2018/11/'>November 2018</a></li>
+	<li><a href='http://wwwwodddd.com/2018/07/'>July 2018</a></li>
+	<li><a href='http://wwwwodddd.com/2018/01/'>January 2018</a></li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+				<li class="cat-item cat-item-1"><a href="http://wwwwodddd.com/category/uncategorized/" >Uncategorized</a>
+</li>
+		</ul>
+			</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://wwwwodddd.com/wp-login.php">Log in</a></li>
+			<li><a href="http://wwwwodddd.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wwwwodddd.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/jQuery/jquery.min.js?ver=10.0.3'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/KaTeX/katex.min.js?ver=10.0.3'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/ClipBoard/clipboard.min.js?ver=2.0.1'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/components/prism-core.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/autoloader/prism-autoloader.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/toolbar/prism-toolbar.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/line-numbers/prism-line-numbers.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/show-language/prism-show-language.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://wwwwodddd.com/wp-includes/js/comment-reply.min.js?ver=5.1.1'></script>
+<script type='text/javascript' src='http://wwwwodddd.com/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
+        <script type="text/javascript">
+            (function ($) {
+                $(document).ready(function () {
+                    $(".katex.math.inline").each(function () {
+                        var parent = $(this).parent()[0];
+                        if (parent.localName !== "code") {
+                            var texTxt = $(this).text();
+                            var el = $(this).get(0);
+                            try {
+                                katex.render(texTxt, el);
+                            } catch (err) {
+                                $(this).html("<span class=\'err\'>" + err);
+                            }
+                        } else {
+                            $(this).parent().text($(this).parent().text());
+                        }
+                    });
+                    $(".katex.math.multi-line").each(function () {
+                        var texTxt = $(this).text();
+                        var el = $(this).get(0);
+                        try {
+                            katex.render(texTxt, el, {displayMode: true})
+                        } catch (err) {
+                            $(this).html("<span class=\'err\'>" + err)
+                        }
+                    });
+                })
+            })(jQuery);
+        </script>
+				<script type="text/javascript">
+			Prism.plugins.autoloader.languages_path = "http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/components/";
+		</script>
+		</body>
+</html>

@@ -8,5 +8,5 @@ These resourses are sorted by Doveqise .
 Including resourses from 10/1/2018~8/25/2019 .  
 High energy ahead : Containing lots of **dalaos** .  
 
-Latest updated && last modified : 8/25/2019 .  
+Latest updated && last modified : 9/25/2019 .  
 by Doveqise ( Lizz )  

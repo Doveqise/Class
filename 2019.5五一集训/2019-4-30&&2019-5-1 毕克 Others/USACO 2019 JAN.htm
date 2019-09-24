@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>USACO 2019 JAN | wwwwodddd&#039;website</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://wwwwodddd.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://wwwwodddd.com/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<meta name='robots' content='noindex,follow' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="wwwwodddd&#039;website &raquo; Feed" href="http://wwwwodddd.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="wwwwodddd&#039;website &raquo; Comments Feed" href="http://wwwwodddd.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="wwwwodddd&#039;website &raquo; USACO 2019 JAN Comments Feed" href="http://wwwwodddd.com/usaco-2019-jan/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/wwwwodddd.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='http://wwwwodddd.com/wp-includes/css/dist/block-library/style.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://wwwwodddd.com/wp-includes/css/dist/block-library/theme.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='Katex-css'  href='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/KaTeX/katex.min.css?ver=10.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='prism-theme-default-css'  href='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/themes/prism.css?ver=1.15.0' type='text/css' media='all' />
+<link rel='stylesheet' id='prism-plugin-toolbar-css'  href='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/toolbar/prism-toolbar.css?ver=1.15.0' type='text/css' media='all' />
+<link rel='stylesheet' id='prism-plugin-line-numbers-css'  href='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/line-numbers/prism-line-numbers.css?ver=1.15.0' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-file-upload-style-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/css/wordpress_file_upload_style.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-file-upload-style-safe-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/css/wordpress_file_upload_style_safe.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-file-upload-adminbar-style-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/css/wordpress_file_upload_adminbarstyle.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-css-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/vendor/jquery/jquery-ui.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-ui-timepicker-addon-css-css'  href='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/vendor/jquery/jquery-ui-timepicker-addon.min.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='http://wwwwodddd.com/wp-content/themes/twentytwelve/style.css?ver=5.1.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='http://wwwwodddd.com/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://wwwwodddd.com/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<!--[if lt IE 8]>
+<script type='text/javascript' src='http://wwwwodddd.com/wp-includes/js/json2.min.js?ver=2015-05-03'></script>
+<![endif]-->
+<script type='text/javascript' src='http://wwwwodddd.com/wp-content/plugins/wp-file-upload/js/wordpress_file_upload_functions.js?ver=5.1.1'></script>
+<link rel='https://api.w.org/' href='http://wwwwodddd.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://wwwwodddd.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://wwwwodddd.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Luogu P3959  宝藏' href='http://wwwwodddd.com/luogu-p3959/' />
+<link rel='next' title='CF1110 / Codeforces Global Round 1' href='http://wwwwodddd.com/cf1110/' />
+<meta name="generator" content="WordPress 5.1.1" />
+<link rel="canonical" href="http://wwwwodddd.com/usaco-2019-jan/" />
+<link rel='shortlink' href='http://wwwwodddd.com/?p=152' />
+<link rel="alternate" type="application/json+oembed" href="http://wwwwodddd.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwwwwodddd.com%2Fusaco-2019-jan%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://wwwwodddd.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwwwwodddd.com%2Fusaco-2019-jan%2F&#038;format=xml" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		</head>
+
+<body class="post-template-default single single-post postid-152 single-format-standard wp-embed-responsive custom-font-enabled single-author">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="http://wwwwodddd.com/" title="wwwwodddd&#039;website" rel="home">wwwwodddd&#039;website</a></h1>
+			<h2 class="site-description">慕君之心，至死方休。</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-menu-1-container"><ul id="menu-menu-1" class="nav-menu"><li id="menu-item-141" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-141"><a href="http://wwwwodddd.com/">Home</a></li>
+<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="http://wwwwodddd.com/about/">About</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+
+			
+				
+	<article id="post-152" class="post-152 post type-post status-publish format-standard hentry category-uncategorized tag-usaco">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">USACO 2019 JAN</h1>
+										<div class="comments-link">
+					<a href="http://wwwwodddd.com/usaco-2019-jan/#comments">1 Reply</a>				</div><!-- .comments-link -->
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><span id="more-152"></span></p>
+<h1>Bronze</h1>
+<h2>B1 / 843</h2>
+<p>还是<span class="katex math inline">3</span>个变量，模拟交换，用数组计数即可。</p>
+<pre><code class="language-python line-numbers">import sys
+sys.stdin = open('shell.in', 'r')
+sys.stdout = open('shell.out', 'w')
+n = input()
+a = [0, 1, 2, 3]
+c = [0, 0, 0, 0]
+for i in range(n):
+    x, y, z = map(int, raw_input().split())
+    a[x], a[y] = a[y], a[x]
+    c[a[z]] += 1
+print max(c)
+</code></pre>
+<h2>B2 / 844</h2>
+<p>未被操作的部分必须是一个单调增加的后缀。</p>
+<pre><code class="language-python line-numbers">import sys
+sys.stdin = open('sleepy.in', 'r')
+sys.stdout = open('sleepy.out', 'w')
+n = input()
+a = map(int, raw_input().split())
+for i in range(n)[::-1]:
+    if i == 0 or a[i-1] &gt; a[i]:
+        print i
+        break
+</code></pre>
+<h2>B3 / 845</h2>
+<p>枚举两个不同的集合，集合求交，然后用交集大小更新答案。</p>
+<pre><code class="language-python line-numbers">import sys
+sys.stdin = open('guess.in', 'r')
+sys.stdout = open('guess.out', 'w')
+n = input()
+a = []
+for i in range(n):
+    a.append(set(raw_input().split()[2:]))
+z = 0
+for i in range(n):
+    for j in range(i):
+        z = max(z, len(a[i] &amp; a[j]))
+print z + 1
+</code></pre>
+<h1>Silver</h1>
+<h2>S1 / 846</h2>
+<p>统计每个点度数，最大的度数+1就是答案。<br />
+比上个月简单好多。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, x, y;
+int c[100020];
+int main() {
+    freopen("planting.in", "r", stdin);
+    freopen("planting.out", "w", stdout);
+    scanf("%d", &amp;n);
+    for (int i = 1; i &lt; n; i++) {
+        scanf("%d%d", &amp;x, &amp;y);
+        c[x]++;
+        c[y]++;
+    }
+    int cnt = 0;
+    for (int i = 0; i &lt; n; i++) {
+        cnt = max(cnt, c[i] + 1);
+    }
+    printf("%d\n", cnt);
+    return 0;
+}
+</code></pre>
+<h2>S2 / 847</h2>
+<p>https://www.luogu.org/problemnew/show/P1451 计算每个区域面积和周长<br />
+直接DFS</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+char s[1002][1002];
+bool v[1002][1002];
+int dx[] = {0, 0, -1, 1};
+int dy[] = {-1, 1, 0, 0};
+int n, area, perimeter;
+pair&lt;int, int&gt; ans;
+bool in(int x, int y) {
+    return 0 &lt;= x &amp;&amp; x &lt; n &amp;&amp; 0 &lt;= y &amp;&amp; y &lt; n;
+}
+
+void dfs(int x, int y) {
+    if (v[x][y]) {
+        return;
+    }
+    v[x][y] = true;
+    area++;
+    for (int i = 0; i &lt; 4; i++) {
+        int nx = x + dx[i];
+        int ny = y + dy[i];
+        if (in(nx, ny) &amp;&amp; s[nx][ny] == '#') {
+            dfs(nx, ny);
+        } else {
+            perimeter++;
+        }
+    }
+}
+
+int main() {
+    freopen("perimeter.in", "r", stdin);
+    freopen("perimeter.out", "w", stdout);
+    scanf("%d", &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        scanf("%s", s[i]);
+    }
+    for (int i = 0; i &lt; n; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            if (s[i][j] == '#' &amp;&amp; !v[i][j]) {
+                area = 0;
+                perimeter = 0;
+                dfs(i, j);
+                ans = max(ans, make_pair(area, -perimeter));
+            }
+        }
+    }
+    printf("%d %d\n", ans.first, -ans.second);
+    return 0;
+}
+</code></pre>
+<h2>S3 / 848</h2>
+<p>将每个(x, y)变成区间(x-y, x+y)<br />
+然后问题变成了选最多的区间，使得不出现包含的情况。<br />
+https://www.luogu.org/problemnew/show/P1803 如果不能选相互包含的区间（选取的多个区间要么相离要么相交），最多选多少个？<br />
+按左端点从小到大排序，如果左端点相同，右端点从大到小排序。<br />
+这样对于两个区间i和j，如果i &lt; j 且 r[i] >= r[j]那么区间i包含区间j。<br />
+贪心选择即可。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, x, y;
+pair&lt;int, int&gt; a[100020];
+int main() {
+    freopen("mountains.in", "r", stdin);
+    freopen("mountains.out", "w", stdout);
+    scanf("%d", &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        scanf("%d%d", &amp;x, &amp;y);
+        a[i].first = x - y;
+        a[i].second = -x - y;
+    }
+    sort(a, a + n);
+    int cnt = 0, l = -2e9;
+    for (int i = 0; i &lt; n; i++) {
+        if (l &lt; -a[i].second) {
+            l = -a[i].second;
+            cnt++;
+        }
+    }
+    printf("%d\n", cnt);
+    return 0;
+}
+</code></pre>
+<h1>Gold</h1>
+<h2>G1 / 849</h2>
+<p>背包，先求出以每个韵结尾的句子数。<br />
+最后对于每个大写字母计数，</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, m, l, p = 1000000007;
+int f[5020];
+int s[5020];
+int c[5020];
+int v[26];
+int z[5020];
+int pw(int x, int y) {
+    int re = 1;
+    for (; y &gt; 0; y &gt;&gt;= 1) {
+        if (y &amp; 1) {
+            re = (long long)re * x % p;
+        }
+        x = (long long)x * x % p;
+    }
+    return re;
+}
+int main() {
+    freopen("poetry.in", "r", stdin);
+    freopen("poetry.out", "w", stdout);
+    scanf("%d%d%d", &amp;n, &amp;m, &amp;l);
+    for (int i = 0; i &lt; n; i++) {
+        scanf("%d%d", &amp;s[i], &amp;c[i]);
+    }
+    f[0] = 1;
+    for (int i = 1; i &lt;= l; i++) {
+        for (int j = 0; j &lt; n; j++) {
+            if (i &gt;= s[j]) {
+                f[i] = (f[i] + f[i - s[j]]) % p;
+            }
+        }
+    }
+    for (int i = 0; i &lt; n; i++) {
+        z[c[i]] = (z[c[i]] + f[l - s[i]]) % p;
+    }
+    for (int i = 0; i &lt; m; i++) {
+        char ch;
+        scanf(" %c", &amp;ch);
+        v[ch - 'A']++;
+    }
+    int ans = 1;
+    for (int i = 0; i &lt; 26; i++) {
+        if (v[i] == 0) {
+            continue;
+        }
+        int tmp = 0;
+        for (int j = 1; j &lt;= n; j++) {
+            tmp = (tmp + pw(z[j], v[i])) % p;
+        }
+        ans = (long long)ans * tmp % p;
+    }
+    printf("%d\n", ans);
+    return 0;
+}
+</code></pre>
+<h2>G2 / 850</h2>
+<p>树状数组。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n;
+int c[1000020];
+int a[1000020];
+int z[1000020];
+int v[1000020];
+void change(int x, int y) {
+    for (int i = x; i &lt;= n; i += i &amp; -i) {
+        c[i] += y;
+    }
+}
+int query(int x) {
+    int re = 0;
+    for (int i = x; i &gt; 0; i -= i &amp; -i) {
+        re += c[i];
+    }
+    return re;
+}
+int main() {
+    freopen("sleepy.in", "r", stdin);
+    freopen("sleepy.out", "w", stdout);
+    scanf("%d", &amp;n);
+    for (int i = 0; i &lt; n; i++) {
+        scanf("%d", &amp;a[i]);
+        change(a[i], 1);
+    }
+    int ans = -1;
+    for (int i = n - 1; i &gt;= 0; i--) {
+        if (i == 0 || a[i - 1] &gt; a[i]) {
+            ans = i;
+            break;
+        }
+    }
+    printf("%d\n", ans);
+    for (int i = ans - 1; i &gt;= 0; i--) {
+        change(a[i], -1);
+        z[i] = query(a[i]) + ans - 1 - i;
+    }
+    if (ans == 0) {
+        printf("\n");
+    } else {
+        for (int i = 0; i &lt; ans; i++) {
+            printf("%d%c", z[i], i == ans - 1 ? '\n' : ' ');
+        }
+    }
+    return 0;
+}
+</code></pre>
+<h2>G3 / 851</h2>
+<p>裸最短路数，用dijkstra更新的时候，不仅要记录最短路，还要记录每个点是被哪个点更新的。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+vector&lt;pair&lt;int, int&gt; &gt; a[10020];
+int n, m, t;
+int c[10020];
+int d[10020];
+int f[10020];
+set&lt;pair&lt;int, int&gt; &gt; s;
+vector&lt;int&gt; q;
+int main() {
+    freopen("shortcut.in", "r", stdin);
+    freopen("shortcut.out", "w", stdout);
+    scanf("%d%d%d", &amp;n, &amp;m, &amp;t);
+    for (int i = 1; i &lt;= n; i++) {
+        scanf("%d", &amp;c[i]);
+    }
+    for (int i = 0; i &lt; m; i++) {
+        int x, y, z;
+        scanf("%d%d%d", &amp;x, &amp;y, &amp;z);
+        a[x].push_back(make_pair(y, z));
+        a[y].push_back(make_pair(x, z));
+    }
+    memset(d, 0x3f, sizeof d);
+    d[1] = 0;
+    s.insert(make_pair(d[1], 1));
+    while (s.size()) {
+        int u = s.begin() -&gt; second;
+        q.push_back(u);
+        s.erase(s.begin());
+        for (int i = 0; i &lt; a[u].size(); i++) {
+            if (d[a[u][i].first] &gt; d[u] + a[u][i].second) {
+                s.erase(make_pair(d[a[u][i].first], a[u][i].first));
+                d[a[u][i].first] = d[u] + a[u][i].second;
+                f[a[u][i].first] = u;
+                s.insert(make_pair(d[a[u][i].first], a[u][i].first));
+            } else if (d[a[u][i].first] == d[u] + a[u][i].second) {
+                f[a[u][i].first] = min(f[a[u][i].first], u);
+            }
+        }
+    }
+    long long ans = 0;
+    for (int i = q.size() - 1; i &gt; 0; i--) {
+        ans = max(ans, (long long)c[q[i]] * (d[q[i]] - t));
+        c[f[q[i]]] += c[q[i]];
+    }
+    printf("%lld\n", ans);
+    return 0;
+}
+</code></pre>
+<h1>Platinum</h1>
+<h2>P1 / 852</h2>
+<p>很容易得到一个时间复杂度为nk的动态规划<br />
+    for (int i = 1; i &lt;= n; i++) {<br />
+        f[i] = f[i &#8211; 1] + 1;<br />
+        for (int j = max(i &#8211; m, 0); j &lt; i; j++) {<br />
+            if (i &#8211; 2 * s[i] > j &#8211; 2 * s[j]) {<br />
+                f[i] = min(f[i], f[j]);<br />
+            } else {<br />
+                f[i] = min(f[i], f[j] + 1);<br />
+            }<br />
+        }<br />
+    }<br />
+先用 max(i &#8211; m, 0) 到 i-1 的每个j 的f[j] + 1更新f[i]<br />
+这个是区间最值，可以用线段树或者单调队列解决<br />
+然后考虑满足i &#8211; 2 * s[i] > j &#8211; 2 * s[j] 的 f[j]来更新f[i] （这里不+1，所以更优）<br />
+所以说每次得到一个f[i]，就把他放在i &#8211; 2 * s[i]的位置上，然后变成了询问小于i &#8211; 2 * s[i]的位置上，最小值是多少的问题。<br />
+这里注意一个位置上可能被加多个值<br />
+并且加上的值还必须支持删除（i &#8211; j > m的话就要把j删掉了）<br />
+所以用线段树，每个叶子节点维护一个set即可。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, m;
+char c[300020];
+int f[300020];
+int s[300020];
+int qq[300020], bb, ff;
+multiset&lt;int&gt; ms[600020];
+int mn[2400020];
+int inf = 1e9;
+void build(int x, int L, int R) {
+    if (L == R - 1) {
+        mn[x] = inf;
+        return;
+    }
+    int M = (L + R) / 2;
+    build(x * 2, L, M);
+    build(x * 2 + 1, M, R);
+    mn[x] = min(mn[x * 2], mn[x * 2 + 1]);
+}
+int query(int x, int L, int R, int l, int r) {
+    if (r &lt;= L || R &lt;= l) {
+        return inf;
+    }
+    if (l &lt;= L &amp;&amp; R &lt;= r) {
+        return mn[x];
+    }
+    int M = (L + R) / 2;
+    return min(query(x * 2, L, M, l, r), query(x * 2 + 1, M, R, l, r));
+}
+void insert(int x, int L, int R, int p, int v) {
+    if (L == R - 1) {
+        ms[L].insert(v);
+        mn[x] = *ms[L].begin();
+        return;
+    }
+    int M = (L + R) / 2;
+    if (p &lt; M) {
+        insert(x * 2, L, M, p, v);
+    } else {
+        insert(x * 2 + 1, M, R, p, v);
+    }
+    mn[x] = min(mn[x * 2], mn[x * 2 + 1]);
+}
+void erase(int x, int L, int R, int p, int v) {
+    if (L == R - 1) {
+        multiset&lt;int&gt;::iterator it = ms[L].find(v);
+        assert(it != ms[L].end());
+        ms[L].erase(it);
+        if (ms[L].size() &gt; 0) {
+            mn[x] = *ms[L].begin();
+        } else {
+            mn[x] = inf;
+        }
+        return;
+    }
+    int M = (L + R) / 2;
+    if (p &lt; M) {
+        erase(x * 2, L, M, p, v);
+    } else {
+        erase(x * 2 + 1, M, R, p, v);
+    }
+    mn[x] = min(mn[x * 2], mn[x * 2 + 1]);
+}
+int main() {
+    freopen("redistricting.in", "r", stdin);
+    freopen("redistricting.out", "w", stdout);
+    scanf("%d%d", &amp;n, &amp;m);
+    scanf("%s", c);
+    for (int i = 0; i &lt; n; i++) {
+        s[i + 1] = s[i] + (c[i] == 'G');
+    }
+    qq[ff++] = 0;
+    build(1, 0, 2 * n + 1);
+    insert(1, 0, 2 * n + 1, n, 0);
+    for (int i = 1; i &lt;= n; i++) {
+        while (qq[bb] &lt; i - m) {
+            bb++;
+        }
+        {
+            int u = i - m - 1;
+            if (u &gt;= 0) {
+                erase(1, 0, 2 * n + 1, n + u - 2 * s[u], f[u]);
+            }
+        }
+        assert(bb &lt; ff);
+        f[i] = f[qq[bb]] + 1;
+        int tmp = query(1, 0, 2 * n + 1, 0, n + i - 2 * s[i]);
+        f[i] = min(f[i], tmp);
+        insert(1, 0, 2 * n + 1, n + i - 2 * s[i], f[i]);
+        while (bb &lt; ff &amp;&amp; f[qq[ff - 1]] &gt;= f[i]) {
+            ff--;
+        }
+        qq[ff++] = i;
+/*
+        for (int j = max(i - m, 0); j &lt; i; j++) {
+            if (i - 2 * s[i] &gt; j - 2 * s[j]) {
+                f[i] = min(f[i], f[j]);
+            } else {
+                f[i] = min(f[i], f[j] + 1);
+            }
+        }
+*/
+//      cerr &lt;&lt; i &lt;&lt; ' ' &lt;&lt; f[i] &lt;&lt; endl;
+    }
+    printf("%d\n", f[n]);
+    return 0;
+}
+</code></pre>
+<h2>P2 / 853</h2>
+<p>全部的路径数 &#8211; 没有公共点（显然不会有公共边）的路径对数 &#8211; 只有公共点而没有公共边的路径对数</p>
+<p>全部的路径数 = C(m, 2)  m为非树边的个数</p>
+<p>没有公共点（显然不会有公共边）的路径对数<br />
+考虑较深的路径的lca的父亲方向的边，我们希望每一对路径都在这个位置被统计到。<br />
+所以需要处理对于每个点，有多少个点以他为LCA。<br />
+每个点对应的子树，内部有多少条路径<br />
+子树内部的路径有两种含义，<br />
+第一种是指路径完全在子树内部（路径的LCA在子树内部）<br />
+第二种是指路径一个端点在子树内部，一个端点在子树外部。<br />
+答案 += 以当前点为LCA的路径数 * (m &#8211; 路径完全在子树内部的个数 &#8211; 路径一个端点在子树内部的个数)<br />
+(m &#8211; 路径完全在子树内部的个数 &#8211; 路径一个端点在子树内部的个数) 相当于是不在子树内部的路径个数</p>
+<p>但是这样会有一个问题，如果一对路径，分属不同子树，那么答案中他们会被统计两次，需要把这种情况减掉。<br />
+这个减去的过程会在所有点的LCA处被减去。</p>
+<p>只有公共点而没有公共边的路径对数，考虑一条路径和一个点的关系有哪些<br />
+可能是完全无关，路径不通过这个点（这不需要考虑）<br />
+可能是通过这个点，和这个点相邻的两条边有交集。<br />
+可能是这个点是端点之一，和这个点相邻的一条边有交集。</p>
+<p>然后需要考虑 有多少对边集（边集大小&lt;=2），交集为空。<br />
+做法非常经典：<br />
+交集为空的边集对数 = C(交集包含空集的集合数, 2) &#8211; C(交集包含大小为1的集合数, 2) + C(交集包含大小为2的集合数, 2)<br />
+大小为1的集合 和 大小为2的集合 均需要枚举所有可能性。</p>
+<p>大小为0的集合 即枚举所有点，对于每个点计算有多少条路径经过他。<br />
+大小为1的集合 即枚举所有边，对于每条边计算有多少条路径经过他。</p>
+<p>以上两个问题几乎一样，但是注意每条边应该在孩子节点和父亲节点各被计算一遍。</p>
+<p>大小为2的集合，即枚举所有相邻的两条边，对于每组计算有多少条路径经过他。<br />
+但是这样会超时，需要想一些其他的办法。</p>
+<p>考虑一个点，大小为2的集合有这么几种可能<br />
+1. 从一个孩子来，到另一个孩子去（那么说明自己是LCA，这样的话每条路径求LCA的时候，求出来最接近LCA的2个点即可）<br />
+2. 从一个孩子来，到父亲节点去（因为每个点的孩子数不太多，直接枚举计算即可）</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int n, m;
+vector&lt;int&gt; a[200020];
+int f[200020][18]; // father
+int d[200020]; //depth
+long long b[200020]; // 有多少条路径过自己父亲这条边
+long long r[200020]; // 当前点有多少个lca
+long long c[200020]; // 子树内有多少个lca
+long long e[200020]; // 有多少个路径，以x的父亲节点为lca
+long long ans;
+map&lt;pair&lt;int, int&gt;, int&gt; g[200020];
+void dfs(int x, int y) {
+    f[x][0] = y;
+    d[x] = d[y] + 1;
+    for (int i = 1; i &lt; 18; i++) {
+        f[x][i] = f[f[x][i - 1]][i - 1];
+    }
+    for (int i: a[x]) {
+        if (i != y) {
+            dfs(i, x);
+        }
+    }
+}
+
+void dfs2(int x, int y) {
+    long long u = c[x];
+    r[x] = c[x];
+    long long s1 = 0;
+    long long s2 = 0;
+    for (int i: a[x]) {
+        if (i != y) {
+            dfs2(i, x);
+            c[x] += c[i];
+            b[x] += b[i];
+            s1 += c[i];
+            s2 += c[i] * c[i];
+            ans -= (b[i] - e[i]) * (b[i] - e[i] - 1) / 2;
+        }
+    }
+    ans -= u * (m - c[x] - b[x]);
+// 有一些会被减两次
+    ans += (s1 * s1 - s2) / 2;
+// 加回来
+
+
+    ans -= (b[x] + r[x]) * (b[x] + r[x] - 1) / 2;
+//  cerr &lt;&lt; (b[x] + r[x]) * (b[x] + r[x] - 1) / 2 &lt;&lt; endl;
+// 减去交集为0的对数（过点x的）
+
+    ans += (b[x]) * (b[x] - 1) / 2 * 2;
+//  cerr &lt;&lt; (b[x]) * (b[x] - 1) / 2 &lt;&lt; endl;
+// 加上交集为1的对数（过点x父亲那条边的）
+
+// 减去交集为2的，LCA是当前点。
+    for (pair&lt;pair&lt;int, int&gt;, int&gt; i: g[x]) {
+        ans -= (long long)i.second * (i.second - 1) / 2;
+//      cerr &lt;&lt; (long long)i.second * (i.second - 1) / 2 &lt;&lt; endl;
+    }
+// 接下来需要考虑的路径就是自己孩子到自己父亲节点这种路径了
+// 简单来说这就是b[i] ?但是有一些路径以自己结束啊，再开一个数组吧。
+}
+
+int lca(int x, int y) {
+    if (d[x] &lt; d[y]) {
+        swap(x, y);
+    }
+    int dd = d[x] - d[y];
+    for (int i = 0; i &lt; 18; i++) {
+        if (dd &gt;&gt; i &amp; 1) {
+            x = f[x][i];
+        }
+    }
+    if (x == y) {
+        return x;
+    }
+    for (int i = 17; i &gt;= 0; i--) {
+        if (f[x][i] != f[y][i]) {
+            x = f[x][i];
+            y = f[y][i];
+        }
+    }
+    return f[x][0];
+}
+
+/*
+对于每个点，每条路径是一个大小为2的集合
+问有多少对集合没有交集
+交集为0的对数 - 交集为1的对数 + 交集为2的对数
+*/
+
+int main() {
+    freopen("exercise.in", "r", stdin);
+    freopen("exercise.out", "w", stdout);
+    scanf("%d%d", &amp;n, &amp;m);
+    for (int i = 1; i &lt; n; i++) {
+        int x, y;
+        scanf("%d%d", &amp;x, &amp;y);
+        a[x].push_back(y);
+        a[y].push_back(x);
+    }
+    dfs(1, 0);
+    m -= n - 1;
+    for (int i = 0; i &lt; m; i++) {
+        int x, y, nx, ny;
+        scanf("%d%d", &amp;x, &amp;y);
+        nx = x;
+        ny = y;
+        int l = lca(x, y);
+        b[x]++;
+        b[y]++;
+        b[l] -= 2;
+        c[l]++;
+        for (int i = 17; i &gt;= 0; i--) {
+            if (d[f[nx][i]] &gt; d[l]) {
+                nx = f[nx][i];
+            }
+            if (d[f[ny][i]] &gt; d[l]) {
+                ny = f[ny][i];
+            }
+        }
+        if (nx &gt; ny) {
+            swap(nx, ny);
+        }
+        if (nx != l) {
+            e[nx]++;
+        }
+        if (ny != l) {
+            e[ny]++;
+        }
+        if (nx != l &amp;&amp; ny != l) {
+            g[l][make_pair(nx, ny)]++;
+        }
+    }
+    ans = (long long)m * (m - 1) / 2;
+/*
+全部 m*(m-1)/2
+减去 不想交的
+*/
+    dfs2(1, 0);
+/*
+到这里，答案应该是点相交的无序对数量
+还需要减去，只相交在点上的，也就是 -(交集为0的对数 - 交集为1的对数 + 交集为2的对数)
+*/
+    printf("%lld\n", ans);
+    return 0;
+}
+</code></pre>
+<h2>P3 / 854</h2>
+<p>对于相邻的2个数字，如果c[i] &lt; c[i + 1]<br />
+那么显然a[i] = c[i]</p>
+<p>如果c[i] > c[i + 1]<br />
+那么显然a[i + k] = c[i + 1]</p>
+<p>考虑这样的数据</p>
+<p>7 3<br />
+1 2 2 2 3<br />
+可以画出7个位置<br />
+1 _ _ 2 _ _ _<br />
+其中<br />
+第2, 3, 4个位置，要求每个长度为3的区间的最小值都是2<br />
+第5, 6, 7个位置，要求每个长度为3的区间的最小值都是3</p>
+<p>7 3<br />
+1 2 2 2 1<br />
+可以画出7个位置<br />
+1 _ _ _ _ _ 1<br />
+其中<br />
+第2, 3, 4, 5, 6个位置，要求每个长度为3的区间的最小值都是2</p>
+<p>7 3<br />
+3 2 2 2 3<br />
+可以画出7个位置<br />
+_ _ _ 2 _ _ _<br />
+其中<br />
+第1, 2, 3个位置，要求每个长度为3的区间的最小值都是3<br />
+第5, 6, 7个位置，要求每个长度为3的区间的最小值都是3</p>
+<p>10 3<br />
+3 2 2 2 2 2 2 3<br />
+_ _ _ 2 _ _ 2 _ _ _<br />
+其中<br />
+第1, 2, 3个位置，要求每个长度为3的区间的最小值都是3<br />
+第8, 9, 10个位置，要求每个长度为3的区间的最小值都是3<br />
+第4, 5, 6, 7个位置，要求每个长度为3的区间的最小值都是2</p>
+<p>发现问题转化为了，对于一个长度为n的数字，要求每个长度为m的区间，最小值都是M &#8211; r<br />
+其中M是能填的数字的上界。<br />
+（第一个和最后一个数字必须是M &#8211; r，并不影响答案，直接让n -= 1即可）<br />
+设f[i]为第i个数字为M &#8211; r的方案数</p>
+<p>f[0] = 1 (什么都没有)<br />
+f[1] = 1 (只填了一个M &#8211; r)<br />
+f[i] = sum(i &#8211; j &lt;= m, f[j] * r ** (i &#8211; j &#8211; 1))<br />
+第i个位置和第j个位置都必须是r，期间有i &#8211; j &#8211; 1个位置可以自由决定填M &#8211; r + 1到M共r个数字。<br />
+这个dp显然可以用前缀和优化。</p>
+<p>把原题可以划分成若干段这样的DP，然后就可以AC了。</p>
+<pre><code class="language-cpp line-numbers">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+int p = 1000000007;
+int M = 1e9;
+int n, m, ans;
+int c[200020];
+vector&lt;pair&lt;int, int&gt; &gt; b;
+long long f[200020];
+int F(int n, int m, int r) {
+    if (n == -1) {
+        return 1;
+    }
+    if (n &lt; 0) {
+        return 0;
+    }
+    for (int i = 0; i &lt; n + 2; i++) {
+        f[i] = 0;
+    }
+    f[0] = 1;
+    long long u = f[0];
+    long long v = 1;
+    for (int i = 0; i &lt; m; i++) {
+        v = v * r % p;
+    }
+    for (int i = 1; i &lt; n + 2; i++) {
+        f[i] = u;
+        u = (u * r + f[i]) % p;
+        if (i - m &gt;= 0) {
+            u = (u - f[i - m] * v) % p;
+        }
+        if (u &lt; 0) {
+            u += p;
+        }
+    }
+    return f[n + 1];
+}
+
+int main() {
+    freopen("tracking2.in", "r", stdin);
+    freopen("tracking2.out", "w", stdout);
+//  scanf("%d%d%d", &amp;n, &amp;m, &amp;M);
+    scanf("%d%d", &amp;n, &amp;m);
+    for (int i = 0; i &lt;= n - m; i++) {
+        scanf("%d", &amp;c[i]);
+    }
+    b.push_back(make_pair(0, 1));
+    for (int i = 0, j; i &lt;= n - m; i = j) {
+        j = i;
+        while (j &lt;= n - m &amp;&amp; c[j] == c[i]) {
+            j++;
+        }
+        b.push_back(make_pair(c[i], j - i));
+    }
+    b.push_back(make_pair(0, 1));
+    ans = 1;
+    for (int i = 1; i &lt; b.size() - 1; i++) {
+        if (b[i - 1].first &lt; b[i].first &amp;&amp; b[i].first &gt; b[i + 1].first) {
+            ans = (long long)ans * F(b[i].second + m - 1, m, M - b[i].first) % p;
+        } else if (b[i - 1].first &gt; b[i].first &amp;&amp; b[i].first &lt; b[i + 1].first) {
+            ans = (long long)ans * F(b[i].second - m - 1, m, M - b[i].first) % p;
+        } else {
+            ans = (long long)ans * F(b[i].second - 1, m, M - b[i].first) % p;
+        }
+    }
+    cout &lt;&lt; ans &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="http://wwwwodddd.com/category/uncategorized/" rel="category tag">Uncategorized</a> and tagged <a href="http://wwwwodddd.com/tag/usaco/" rel="tag">USACO</a> on <a href="http://wwwwodddd.com/usaco-2019-jan/" title="00:00" rel="bookmark"><time class="entry-date" datetime="2019-01-23T00:00:04+08:00">2019-01-23</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://wwwwodddd.com/author/wwwwodddd/" title="View all posts by wwwwodddd" rel="author">wwwwodddd</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+				<nav class="nav-single">
+					<h3 class="assistive-text">Post navigation</h3>
+					<span class="nav-previous"><a href="http://wwwwodddd.com/luogu-p3959/" rel="prev"><span class="meta-nav">&larr;</span> Luogu P3959  宝藏</a></span>
+					<span class="nav-next"><a href="http://wwwwodddd.com/cf1110/" rel="next">CF1110 / Codeforces Global Round 1 <span class="meta-nav">&rarr;</span></a></span>
+				</nav><!-- .nav-single -->
+
+				
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			1 thought on &ldquo;<span>USACO 2019 JAN</span>&rdquo;		</h2>
+
+		<ol class="commentlist">
+					<li class="comment even thread-even depth-1" id="li-comment-47">
+		<article id="comment-47" class="comment">
+			<header class="comment-meta comment-author vcard">
+				<img alt='' src='http://0.gravatar.com/avatar/9f23c0999d1fa05bf4b63e78a02a2f80?s=44&#038;d=mm&#038;r=g' srcset='http://0.gravatar.com/avatar/9f23c0999d1fa05bf4b63e78a02a2f80?s=88&#038;d=mm&#038;r=g 2x' class='avatar avatar-44 photo' height='44' width='44' /><cite><b class="fn"><a href='http://bubbleioa.top/' rel='external nofollow' class='url'>冒泡ioa</a></b> </cite><a href="http://wwwwodddd.com/usaco-2019-jan/#comment-47"><time datetime="2019-01-29T08:30:12+08:00">2019-01-29 at 08:30</time></a>				</header><!-- .comment-meta -->
+
+				
+				<section class="comment-content comment">
+				<p># tql %%%</p>
+								</section><!-- .comment-content -->
+
+				<div class="reply">
+				<a rel='nofollow' class='comment-reply-link' href='/usaco-2019-jan/?replytocom=47#respond' data-commentid="47" data-postid="152" data-belowelement="comment-47" data-respondelement="respond" aria-label='Reply to 冒泡ioa'>Reply</a> <span>&darr;</span>				</div><!-- .reply -->
+			</article><!-- #comment-## -->
+				</li><!-- #comment-## -->
+		</ol><!-- .commentlist -->
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/usaco-2019-jan/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="http://wwwwodddd.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='152' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments .comments-area -->
+
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://wwwwodddd.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://wwwwodddd.com/gcj-2019-r1b/">GCJ 2019 R1B</a>
+									</li>
+											<li>
+					<a href="http://wwwwodddd.com/usaco-2019-open/">USACO 2019 OPEN</a>
+									</li>
+											<li>
+					<a href="http://wwwwodddd.com/bestcoder-round-72/">BestCoder Round #72</a>
+									</li>
+											<li>
+					<a href="http://wwwwodddd.com/luogu-p2831/">Luogu P2831 愤怒的小鸟</a>
+									</li>
+											<li>
+					<a href="http://wwwwodddd.com/2019-51nod-2/">2019年十二省NOI省选联考模测（第二场）</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='http://bubbleioa.top/' rel='external nofollow' class='url'>冒泡ioa</a></span> on <a href="http://wwwwodddd.com/usaco-2019-jan/#comment-47">USACO 2019 JAN</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://www.k-xzy.xyz' rel='external nofollow' class='url'>Remmina</a></span> on <a href="http://wwwwodddd.com/usaco-2018-dec/#comment-44">USACO 2018 DEC</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://fff' rel='external nofollow' class='url'>hao911</a></span> on <a href="http://wwwwodddd.com/%e8%bf%99%e9%87%8c%e7%a9%ba%e7%a9%ba%e5%a6%82%e4%b9%9f/#comment-43">这里空空如也</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://wordpress.org/' rel='external nofollow' class='url'>A WordPress Commenter</a></span> on <a href="http://wwwwodddd.com/einheit/#comment-1">网站重构</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.myshareedu.com:3000/' rel='external nofollow' class='url'>LPteamJP</a></span> on <a href="http://wwwwodddd.com/%e8%bf%99%e9%87%8c%e7%a9%ba%e7%a9%ba%e5%a6%82%e4%b9%9f/#comment-11">这里空空如也</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+				<li><a href='http://wwwwodddd.com/2019/04/'>April 2019</a></li>
+	<li><a href='http://wwwwodddd.com/2019/03/'>March 2019</a></li>
+	<li><a href='http://wwwwodddd.com/2019/02/'>February 2019</a></li>
+	<li><a href='http://wwwwodddd.com/2019/01/'>January 2019</a></li>
+	<li><a href='http://wwwwodddd.com/2018/12/'>December 2018</a></li>
+	<li><a href='http://wwwwodddd.com/2018/11/'>November 2018</a></li>
+	<li><a href='http://wwwwodddd.com/2018/07/'>July 2018</a></li>
+	<li><a href='http://wwwwodddd.com/2018/01/'>January 2018</a></li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+				<li class="cat-item cat-item-1"><a href="http://wwwwodddd.com/category/uncategorized/" >Uncategorized</a>
+</li>
+		</ul>
+			</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://wwwwodddd.com/wp-login.php">Log in</a></li>
+			<li><a href="http://wwwwodddd.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://wwwwodddd.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/jQuery/jquery.min.js?ver=10.0.3'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/KaTeX/katex.min.js?ver=10.0.3'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/ClipBoard/clipboard.min.js?ver=2.0.1'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/components/prism-core.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/autoloader/prism-autoloader.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/toolbar/prism-toolbar.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/line-numbers/prism-line-numbers.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/show-language/prism-show-language.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js?ver=1.15.0'></script>
+<script type='text/javascript' src='http://wwwwodddd.com/wp-includes/js/comment-reply.min.js?ver=5.1.1'></script>
+<script type='text/javascript' src='http://wwwwodddd.com/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
+        <script type="text/javascript">
+            (function ($) {
+                $(document).ready(function () {
+                    $(".katex.math.inline").each(function () {
+                        var parent = $(this).parent()[0];
+                        if (parent.localName !== "code") {
+                            var texTxt = $(this).text();
+                            var el = $(this).get(0);
+                            try {
+                                katex.render(texTxt, el);
+                            } catch (err) {
+                                $(this).html("<span class=\'err\'>" + err);
+                            }
+                        } else {
+                            $(this).parent().text($(this).parent().text());
+                        }
+                    });
+                    $(".katex.math.multi-line").each(function () {
+                        var texTxt = $(this).text();
+                        var el = $(this).get(0);
+                        try {
+                            katex.render(texTxt, el, {displayMode: true})
+                        } catch (err) {
+                            $(this).html("<span class=\'err\'>" + err)
+                        }
+                    });
+                })
+            })(jQuery);
+        </script>
+				<script type="text/javascript">
+			Prism.plugins.autoloader.languages_path = "http://cdn.jsdelivr.net/wp/wp-editormd/tags/10.0.3/assets/Prism.js/components/";
+		</script>
+		</body>
+</html>

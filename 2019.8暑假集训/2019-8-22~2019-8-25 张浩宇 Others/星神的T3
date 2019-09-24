@@ -1,0 +1,39 @@
+int mx;
+dfs(int nd) {
+	if(nd > 0) dp[mx]++;	
+	for (int i = 1; i <= mx; i++) {
+		如果与其相连的点没有染色为i，
+		染为i
+		dfs(nd + 1);	
+	}
+	染为++mx;
+	dfs(nd + 1);
+}
+
+dp[i] 有i种颜色的染色方案。
+1 ~ 10
+总共有k种颜色求方案，
+k <= n
+	for (int i = 1; i <= k; i++) {
+		ans += dp[i] * com[k][i] * i!;
+	}
+k >= n
+	for (int i = 1; i <= n; i++) {
+		ans += dp[i] * com[k][i] * i!;
+	}
+[1]
+
+2 1 1
+1 2 
+9
+
+72
+
+[2]
+
+
+
+3 0 1
+10
+
+1000
