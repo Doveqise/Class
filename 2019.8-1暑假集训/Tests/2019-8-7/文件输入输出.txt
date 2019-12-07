@@ -1,0 +1,13 @@
+assign(input,'a.in');
+reset(input);
+assign(output,'a.out');
+rewrite(output);
+
+xxxx
+xxxx
+...
+
+close(input);
+close(output);
+
+其中 a.in 和 a.out 是当前题目规定的输入和输出文件名。注意不一定每道题的输入输出文件名都一样。

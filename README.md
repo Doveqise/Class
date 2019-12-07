@@ -1,8 +1,9 @@
 # SJZEZ's OI Training Notes and Resourses  
 #### Warning ! Commercially prohibited !  
-#### Attention ! These resourses are provided by SJZEZ's seniors.  
-#### If you wanna download these resourses , please fetch the admission of SJZEZ's seniors .  
-#### Thanks for SJZEZ's seniors' inculcate .  
+#### Attention ! These resourses are provided by seniors.  
+#### If you wanna get use of these resourses , please fetch the admission of Related persons .
+#### Thanks for seniors' inculcate .
+#### Please contact me to delete if tort .
 
 These resourses are sorted by Doveqise .  
 Including resourses from 10/1/2018~12/7/2019 .  
