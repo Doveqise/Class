@@ -5,8 +5,8 @@
 #### Thanks for SJZEZ's seniors' inculcate .  
 
 These resourses are sorted by Doveqise .  
-Including resourses from 10/1/2018~3/12/2019 .  
+Including resourses from 10/1/2018~12/7/2019 .  
 High energy ahead : Containing lots of **dalaos** .  
 
-Latest updated && last modified : 3/12/2019 .  
+Latest updated && last modified : 12/7/2019 .  
 by Doveqise ( Lizz )  
